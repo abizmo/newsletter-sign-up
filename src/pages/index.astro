@@ -3,14 +3,40 @@
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="/assets/images/favicon-32x32.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+  </head>
+  <body>
+    <picture>
+      <source
+        media="(min-width: 600px)"
+        srcset="/images/illustration-sign-up-desktop.svg"
+        type="image/svg+xml"
+      />
+      <img src="/images/illustration-sign-up-mobile.svg" alt="hero" />
+    </picture>
+    <h1>Stay updated!</h1>
+    <p>Join 60,000+ product managers receiving monthly updates on:</p>
+    <ul>
+      <li>Product discovery and building what matters</li>
+      <li>Measuring to ensure updates are a success</li>
+      <li>And much more!</li>
+    </ul>
+    <form>
+      <label for="email">Email address</label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="email@company.com"
+      />
+      <button type="submit">Subscribe to monthly newsletter</button>
+    </form>
+  </body>
 </html>
