@@ -13,11 +13,11 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
 }
 
 html,
 body {
-  margin: 0;
   font-family: var(--ff-sans);
   font-size: var(--fs-500);
   line-height: 1.5;
@@ -35,7 +35,6 @@ h1 {
   color: var(--clr-neutral-100);
   font-size: var(--fs-900);
   line-height: 1;
-  margin-top: 0;
 }
 
 ul[role="list"] {
@@ -48,6 +47,7 @@ li {
   gap: 1em;
   margin-bottom: 0.5em;
 }
+
 li::before {
   content: url(/images/icon-list.svg);
 }
@@ -60,8 +60,36 @@ li::before {
 
 .content {
   padding: 0 2em;
+  display: grid;
+  place-content: center;
+  gap: 1.5em;
 }
 
+.form__group {
+  display: grid;
+  gap: 0.3em;
+  margin-bottom: 1em;
+}
+
+.form__group label {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.form__group input {
+  border: 1px solid hsl(var(--clr-neutral-600));
+  border-radius: 0.5rem;
+  padding: 1em 1.5em;
+}
+
+button {
+  width: 100%;
+  background-color: hsl(var(--clr-neutral-100));
+  color: hsl(var(--clr-neutral-900));
+  border: none;
+  padding: 1em 1.5em;
+  border-radius: 0.5em;
+}
 /* TODO: remove this
 @media (max-width: 767px) {
   main {
