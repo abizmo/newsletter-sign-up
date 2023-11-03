@@ -31,6 +31,14 @@ main {
   background-color: hsl(var(--clr-neutral-900));
 }
 
+h1 {
+  color: var(--clr-neutral-100);
+  font-size: var(--fs-900);
+  line-height: 1;
+  margin-top: 0;
+}
+
+
 .flex {
   display: flex;
   flex-direction: column;
