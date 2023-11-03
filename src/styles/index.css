@@ -38,6 +38,19 @@ h1 {
   margin-top: 0;
 }
 
+ul[role="list"] {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  gap: 1em;
+  margin-bottom: 0.5em;
+}
+li::before {
+  content: url(/images/icon-list.svg);
+}
 
 .flex {
   display: flex;
