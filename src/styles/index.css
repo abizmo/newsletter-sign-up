@@ -55,11 +55,11 @@ li::before {
 .flex {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 2em;
 }
 
 .content {
-  padding: 1rem;
+  padding: 0 2em;
 }
 
 /* TODO: remove this
@@ -81,8 +81,8 @@ li::before {
     width: 100%;
     max-width: 900px;
     margin: 0 auto;
-    padding: 2rem;
-    border-radius: 1rem;
+    padding: 2em;
+    border-radius: 1em;
   }
 
   .flex {
