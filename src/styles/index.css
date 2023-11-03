@@ -31,6 +31,10 @@ main {
   gap: 2rem;
 }
 
+.content {
+  padding: 1rem;
+}
+
 /* TODO: remove this
 @media (max-width: 767px) {
   main {
