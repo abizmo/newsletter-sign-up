@@ -21,7 +21,7 @@ export default function Form() {
   });
 
   const onSubmit = (data: FormState) => {
-    console.log(data);
+    window.location.assign("/success");
   };
 
   const groupClasses = ["form__group"];

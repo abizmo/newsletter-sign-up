@@ -1,46 +1,27 @@
 ---
+import RootLayout from "../layouts/RootLayout.astro";
 import Form from "../components/Form";
-import "../styles/index.css";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="generator" content={Astro.generator} />
-    <title>
-      Frontend Mentor | Newsletter sign-up form with success message
-    </title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <main>
-      <div class="flex">
-        <picture>
-          <source
-            media="(min-width: 768px)"
-            srcset="/images/illustration-sign-up-desktop.svg"
-            type="image/svg+xml"
-          />
-          <img src="/images/illustration-sign-up-mobile.svg" alt="hero" />
-        </picture>
-        <div class="content">
-          <h1>Stay updated!</h1>
-          <p>Join 60,000+ product managers receiving monthly updates on:</p>
-          <ul role="list">
-            <li>Product discovery and building what matters</li>
-            <li>Measuring to ensure updates are a success</li>
-            <li>And much more!</li>
-          </ul>
-          <Form client:load />
-        </div>
-      </div>
-    </main>
-  </body>
-</html>
+<RootLayout>
+  <div class="flex">
+    <picture>
+      <source
+        media="(min-width: 768px)"
+        srcset="/images/illustration-sign-up-desktop.svg"
+        type="image/svg+xml"
+      />
+      <img src="/images/illustration-sign-up-mobile.svg" alt="hero" />
+    </picture>
+    <div class="content">
+      <h1>Stay updated!</h1>
+      <p>Join 60,000+ product managers receiving monthly updates on:</p>
+      <ul role="list">
+        <li>Product discovery and building what matters</li>
+        <li>Measuring to ensure updates are a success</li>
+        <li>And much more!</li>
+      </ul>
+      <Form client:load />
+    </div>
+  </div>
+</RootLayout>
