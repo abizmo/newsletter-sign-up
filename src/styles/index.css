@@ -71,15 +71,35 @@ li::before {
   margin-bottom: 1em;
 }
 
-.form__group label {
+.form__header {
+  display: flex;
+  justify-content: space-between;
   font-size: 12px;
   font-weight: 700;
+}
+
+.form__group-error .error {
+  color: hsl(var(--clr-primary));
 }
 
 .form__group input {
   border: 1px solid hsl(var(--clr-neutral-600));
   border-radius: 0.5rem;
   padding: 1em 1.5em;
+}
+
+.form__group input::placeholder {
+  color: hsl(var(--clr-neutral-600));
+}
+
+.form__group-error input {
+  border-color: hsl(var(--clr-primary));
+  background-color: hsla(var(--clr-primary), 0.16);
+  color: hsl(var(--clr-primary));
+}
+
+.form__group-error input::placeholder {
+  color: hsl(var(--clr-primary));
 }
 
 button {
@@ -90,12 +110,6 @@ button {
   padding: 1em 1.5em;
   border-radius: 0.5em;
 }
-/* TODO: remove this
-@media (max-width: 767px) {
-  main {
-    min-height: 100vh;
-  }
-} */
 
 @media (min-width: 768px) {
   body {
@@ -106,7 +120,6 @@ button {
   }
 
   main {
-    width: 100%;
     max-width: 900px;
     margin: 0 auto;
     padding: 2em;
