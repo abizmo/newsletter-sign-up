@@ -39,8 +39,10 @@ export default function Form() {
         </div>
         <input
           type="email"
+          id="email"
           {...register("email")}
           placeholder="email@company.com"
+          autoComplete="email"
         />
       </div>
       <button type="submit">Subscribe to monthly newsletter</button>
