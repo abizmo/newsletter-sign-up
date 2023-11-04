@@ -86,6 +86,7 @@ li::before {
   border: 1px solid hsl(var(--clr-neutral-600));
   border-radius: 0.5rem;
   padding: 1em 1.5em;
+  outline: none;
 }
 
 .form__group input::placeholder {

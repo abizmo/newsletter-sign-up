@@ -1,4 +1,5 @@
 ---
+import Form from "../components/Form";
 import "../styles/index.css";
 ---
 
@@ -37,24 +38,7 @@ import "../styles/index.css";
             <li>Measuring to ensure updates are a success</li>
             <li>And much more!</li>
           </ul>
-          <form>
-            <!-- TODO: handle errors -->
-            <div class="form__group">
-              <!-- <div class="form__group form__group-error"> -->
-              <div class="form__header">
-                <label for="email">Email address</label>
-                <!-- <span class="error">Valid email required</span> -->
-              </div>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="email@company.com"
-              />
-            </div>
-            <!-- TODO: handle errors -->
-            <button type="submit">Subscribe to monthly newsletter</button>
-          </form>
+          <Form client:load />
         </div>
       </div>
     </main>
