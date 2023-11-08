@@ -2,6 +2,27 @@
 import RootLayout from "../layouts/RootLayout.astro";
 ---
 
+<script>
+  const querystring = window.location.search;
+  const params = new URLSearchParams(querystring);
+  const at = params.get("at");
+  const email = document.querySelector("#email");
+  email?.append(at as string);
+</script>
 <RootLayout>
-  <h1>success</h1>
+  <div class="flex success-container">
+    <div>
+      <img
+        class="icon__success"
+        src="/images/icon-success.svg"
+        alt="Success!"
+      />
+    </div>
+    <h1>Thanks for subscribing!</h1>
+    <p>
+      A confirmation email has been sent to <b id="email"></b>. Please open it
+      and click the button inside to confirm your subscription
+    </p>
+    <button class="push-to-bottom">Dismiss message</button>
+  </div>
 </RootLayout>

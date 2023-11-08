@@ -24,7 +24,8 @@ body {
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 
 main {
@@ -112,6 +113,15 @@ button {
   border-radius: 0.5em;
 }
 
+.success-container {
+  padding: 4em 2em;
+  height: 100vh;
+}
+
+.push-to-bottom {
+  margin-top: auto;
+}
+
 @media (min-width: 768px) {
   body {
     display: grid;
@@ -127,7 +137,12 @@ button {
     border-radius: 1em;
   }
 
-  .flex {
+  .landing-container {
     flex-direction: row-reverse;
+  }
+
+  .success-container {
+    max-width: 28em;
+    height: auto;
   }
 }

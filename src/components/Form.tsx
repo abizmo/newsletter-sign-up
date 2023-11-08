@@ -21,7 +21,7 @@ export default function Form() {
   });
 
   const onSubmit = (data: FormState) => {
-    window.location.assign("/success");
+    window.location.assign(`/success?at=${data.email}`);
   };
 
   const groupClasses = ["form__group"];
