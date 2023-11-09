@@ -86,6 +86,7 @@ li::before {
 .form__group input {
   border: 1px solid hsl(var(--clr-neutral-600));
   border-radius: 0.5rem;
+  color: hsl(var(--clr-neutral-100));
   padding: 1em 1.5em;
   outline: none;
 }
@@ -94,7 +95,12 @@ li::before {
   color: hsl(var(--clr-neutral-600));
 }
 
-.form__group-error input {
+.form__group input:focus {
+  border-color: hsl(var(--clr-neutral-100));
+}
+
+.form__group-error input,
+.form__group-error input:focus {
   border-color: hsl(var(--clr-primary));
   background-color: hsla(var(--clr-primary), 0.16);
   color: hsl(var(--clr-primary));
@@ -114,6 +120,15 @@ button {
   border-radius: 0.5em;
   text-decoration: none;
   text-align: center;
+  font-weight: 700;
+}
+
+a:hover,
+button:hover {
+  background: #ff693d;
+  background: -webkit-linear-gradient(to right, #ff537b, #ff693d);
+  background: linear-gradient(to right, #ff537b, #ff693d);
+  box-shadow: hsla(var(--clr-primary), 0.3) 0px 1.5em 1.5em 0px;
 }
 
 .success-container {
