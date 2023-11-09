@@ -7,8 +7,10 @@ import RootLayout from "../layouts/RootLayout.astro";
   const params = new URLSearchParams(querystring);
   const at = params.get("at");
   const email = document.querySelector("#email");
-  email?.append(at as string);
+  if (email)
+    email.textContent = at;
 </script>
+
 <RootLayout>
   <div class="flex success-container">
     <div>
