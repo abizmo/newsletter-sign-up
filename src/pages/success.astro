@@ -1,15 +1,12 @@
 ---
 import RootLayout from "../layouts/RootLayout.astro";
----
 
-<script>
-  const querystring = window.location.search;
-  const params = new URLSearchParams(querystring);
-  const at = params.get("at");
-  const email = document.querySelector("#email");
-  if (email)
-    email.textContent = at;
-</script>
+
+const email = Astro.cookies.get('data')?.json().email;
+
+if (!email) Astro.redirect('/');
+
+---
 
 <RootLayout>
   <div class="flex success-container">
@@ -22,7 +19,7 @@ import RootLayout from "../layouts/RootLayout.astro";
     </div>
     <h1>Thanks for subscribing!</h1>
     <p>
-      A confirmation email has been sent to <b id="email"></b>. Please open it
+      A confirmation email has been sent to <b>{email}</b>. Please open it
       and click the button inside to confirm your subscription
     </p>
     <button class="push-to-bottom">Dismiss message</button>

@@ -20,8 +20,16 @@ export default function Form() {
     resolver: zodResolver(formSchema),
   });
 
-  const onSubmit = (data: FormState) => {
-    window.location.assign(`/success?at=${data.email}`);
+  const onSubmit = async (data: FormState) => {
+    const formData = new FormData()
+    formData.append('email', data.email)
+
+    await fetch("/signup", {
+      method: "POST",
+      body: formData,
+    })
+
+    window.location.assign('/success');
   };
 
   const groupClasses = ["form__group"];
