@@ -104,6 +104,7 @@ li::before {
   color: hsl(var(--clr-primary));
 }
 
+a,
 button {
   width: 100%;
   background-color: hsl(var(--clr-neutral-100));
@@ -111,6 +112,8 @@ button {
   border: none;
   padding: 1em 1.5em;
   border-radius: 0.5em;
+  text-decoration: none;
+  text-align: center;
 }
 
 .success-container {

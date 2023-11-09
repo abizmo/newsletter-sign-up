@@ -1,11 +1,9 @@
 ---
 import RootLayout from "../layouts/RootLayout.astro";
 
+const email = Astro.cookies.get("data")?.json().email;
 
-const email = Astro.cookies.get('data')?.json().email;
-
-if (!email) Astro.redirect('/');
-
+if (!email) Astro.redirect("/");
 ---
 
 <RootLayout>
@@ -19,9 +17,9 @@ if (!email) Astro.redirect('/');
     </div>
     <h1>Thanks for subscribing!</h1>
     <p>
-      A confirmation email has been sent to <b>{email}</b>. Please open it
-      and click the button inside to confirm your subscription
+      A confirmation email has been sent to <b>{email}</b>. Please open it and
+      click the button inside to confirm your subscription
     </p>
-    <button class="push-to-bottom">Dismiss message</button>
+    <a href="/" class="push-to-bottom">Dismiss message</a>
   </div>
 </RootLayout>
